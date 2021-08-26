@@ -1,0 +1,56 @@
+TCEFORM.tt_content {
+    header_layout.altLabels.0 = Default (H2)
+    header_layout.altLabels.1 = H1
+    header_layout.altLabels.2 = H2
+    header_layout.altLabels.3 = H3
+    header_layout.altLabels.4 = H4
+    header_layout.altLabels.5 = H5
+
+    header_layout.addItems.6 = H6
+
+    #CType.removeItems = menu_recently_updated,menu_sitemap,menu_section,menu_related_pages,menu_abstract,menu_pages,menu_subpages,header,textmedia, table, textpic,bullets,login,image,script,html,upload,div,splash,uploads
+    #CType.removeItems = menu_recently_updated,menu_sitemap,menu_section,menu_related_pages,menu_abstract,menu_pages,menu_subpages,header,table,textmedia,textpic,special,bullets,login,image,script,upload,div,splash,uploads
+   
+    sys_language_uid.disabled = 0
+    colPos.disabled = 0
+    section_frame.disabled = 0
+    layout.disabled = 0
+    text_align.disabled = 0
+    text_face.disabled = 0
+    text_size.disabled = 0
+    text_color.disabled = 0
+    disablePrependAtCopy = 0
+    date.disabled = 0
+
+    layout.altLabels.1 = Display 1
+    layout.altLabels.2 = Display 2
+    layout.altLabels.3 = Display 3
+}
+
+TCEFORM.pages{
+    disablePrependAtCopy = 1
+    layout {
+        disabled = 1
+    }
+    backend_layout {
+        disabled = 0
+    }   
+    doktype{
+        #removeItems = 199, 255
+    }
+    #categories.config.treeConfig.rootUid = 17
+}
+
+TCEMAIN {
+    table {
+        tt_content {
+            disablePrependAtCopy = 1
+            disableHideAtCopy = 1
+        }
+    }
+}
+
+tx_news.templateLayouts{
+    1 = Default List
+    2 = Special Grid
+}

@@ -1,0 +1,9 @@
+plugin.tx_gram{
+    settings{
+
+    }
+    view{
+        layoutRootPath = EXT:gram/Resources/Private/Layouts/
+        partialRootPath = EXT:gram/Resources/Private/Partials/
+    }
+}

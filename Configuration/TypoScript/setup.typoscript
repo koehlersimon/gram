@@ -1,0 +1,255 @@
+config{
+    absRefPrefix = /
+    sendCacheHeaders = 1
+    enableContentLengthHeader = 1
+    no_cache = 0
+    concatenateCss = 1
+    concatenateJs = 1
+    compressCss = 1
+    compressJs = 1
+    doctype = html5
+    disablePrefixComment = 1
+    moveJsFromHeaderToFooter = 1
+    spamProtectEmailAddresses = 1
+    xmlprologue = none
+    headerComment = TYPO3 Theme by SK / simon-koehler.com
+}
+
+#page.config.contentObjectExceptionHandler = 0
+
+page = PAGE
+page{
+
+        meta {
+            viewport = width=device-width, initial-scale=1
+            X-UA-Compatible = IE=11
+            X-UA-Compatible.httpEquivalent = 1
+            msapplication-TileColor = #2b2b2b
+            theme-color = #2b2b2b
+            keywords {
+                stdWrap {
+                    override {
+                        data = page:keywords
+                    }
+                }
+            }
+        }
+
+        headerData{
+
+        }
+
+        includeCSS {
+            global = EXT:gram/Resources/Public/Css/Default.css
+        }
+
+        includeJS{
+            global = EXT:gram/Resources/Public/JavaScript/Global.js
+        }
+
+    10 = FLUIDTEMPLATE
+	10{
+
+            layoutRootPath = {$plugin.tx_freelancer_theme.view.layoutRootPath}
+            partialRootPath = {$plugin.tx_freelancer_theme.view.partialRootPath}
+            settings < lib.themeSettings
+
+            dataProcessing {
+
+                5 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+                5 {
+                   special = directory
+                   special.value.data = site:rootPageId
+                   levels = 2
+                   as = menuPages
+                   expandAll = 1
+                   includeSpacer = 1
+                   titleField = nav_title // title
+                   dataProcessing {
+                      10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                      10 {
+                         references.fieldName = media
+                      }
+                   }
+                }
+
+                15 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+                15 {
+                    levels = 5
+                    entryLevel = 1
+                    expandAll = 0
+                    includeSpacer = 1
+                    as = menuSecond
+                }
+
+                20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+                20 {
+                    special = directory
+                    special.value = {$plugin.tx_freelancer_theme.settings.userMenu.rootPage}
+                    levels = 2
+                    includeSpacer = 1
+                    expandAll = 1
+                    titleField = nav_title // title
+                    as = menuFeUser
+                }
+
+                25 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+                25{
+                    languages = {$plugin.tx_freelancer_theme.settings.languageMenu.languages}
+                    as = menuLanguage
+                }
+
+            }
+
+            variables {
+
+                contentTop < styles.content.get
+                contentTop.select.where = colPos = 1
+                contentTop.select.includeRecordsWithoutDefaultTranslation = 1
+                contentTop.slide = -1
+
+                content < styles.content.get
+                content.select.where = colPos = 0
+                content.select.includeRecordsWithoutDefaultTranslation = 1
+
+                contentAside < styles.content.get
+                contentAside.select.where = colPos = 3
+                contentAside.slide = -1
+
+                contentFooter < styles.content.get
+                contentFooter.select.where = colPos = 2
+                contentFooter.select.includeRecordsWithoutDefaultTranslation = 1
+                contentFooter.slide = -1
+
+                content3 < styles.content.get
+                content3.select.where = colPos = 3
+                content3.select.includeRecordsWithoutDefaultTranslation = 1
+
+                content4 < styles.content.get
+                content4.select.where = colPos = 4
+                content4.select.includeRecordsWithoutDefaultTranslation = 1
+
+                content5 < styles.content.get
+                content5.select.where = colPos = 5
+                content5.select.includeRecordsWithoutDefaultTranslation = 1
+
+                content6 < styles.content.get
+                content6.select.where = colPos = 6
+                content6.select.includeRecordsWithoutDefaultTranslation = 1
+
+                content7 < styles.content.get
+                content7.select.where = colPos = 7
+                content7.select.includeRecordsWithoutDefaultTranslation = 1
+
+                content8 < styles.content.get
+                content8.select.where = colPos = 8
+                content8.select.includeRecordsWithoutDefaultTranslation = 1
+
+                content9 < styles.content.get
+                content9.select.where = colPos = 9
+                content9.select.includeRecordsWithoutDefaultTranslation = 1
+
+                content10 < styles.content.get
+                content10.select.where = colPos = 10
+                content10.select.includeRecordsWithoutDefaultTranslation = 1
+
+                content11 < styles.content.get
+                content11.select.where = colPos = 11
+                content11.select.includeRecordsWithoutDefaultTranslation = 1
+
+                userName = TEXT
+                userName.data = TSFE:fe_user|user|name
+
+                userEmail = TEXT
+                userEmail.data = TSFE:fe_user|user|email
+
+                rootPageId = TEXT
+                rootPageId.data = site:rootPageId
+
+                pageHeader = TEXT
+                pageHeader {
+                    value = {page:title}
+                    insertData = 1
+                    ifEmpty.value = Empty page
+                }
+
+            }
+
+            file.cObject = CASE
+            file.cObject {
+                key.data = levelfield:-1, backend_layout_next_level, slide
+                key.override.field = backend_layout
+
+                pagets__DefaultSidebarLeft = TEXT
+                pagets__DefaultSidebarLeft.value = EXT:gram/Resources/Private/Templates/DefaultSidebarLeft.html
+
+                pagets__DefaultSidebarLeftContainer = TEXT
+                pagets__DefaultSidebarLeftContainer.value = EXT:gram/Resources/Private/Templates/DefaultSidebarLeftContainer.html
+
+                pagets__DefaultContainer = TEXT
+                pagets__DefaultContainer.value = EXT:gram/Resources/Private/Templates/DefaultContainer.html
+
+                pagets__ServiceGrid = TEXT
+                pagets__ServiceGrid.value = EXT:gram/Resources/Private/Templates/ServiceGrid.html
+
+                # Deprecated, needs to be removed in next version
+                pagets__2000 = TEXT
+                pagets__2000.value = EXT:gram/Resources/Private/Templates/DefaultSidebarLeft.html
+
+                default = TEXT
+                default.value = EXT:gram/Resources/Private/Templates/Default.html
+            }
+	}
+
+}
+
+
+lib.contentElement {
+    templateRootPaths {
+        23000 = EXT:gram/Resources/Private/Ext/fluid_styled_content/Resources/Private/Templates/
+    }
+    partialRootPaths {
+        23000 = EXT:gram/Resources/Private/Ext/fluid_styled_content/Resources/Private/Partials/
+    }
+    layoutRootPaths {
+        23000 = EXT:gram/Resources/Private/Ext/fluid_styled_content/Resources/Private/Layouts/
+    }
+}
+
+tt_content {
+
+    # Navbar Rendering Definition
+    navbar = FLUIDTEMPLATE
+    navbar {
+        templateRootPaths {
+            10 = EXT:gram/Resources/Private/Templates/ContentElements/
+        }
+        templateName = Navbar
+        dataProcessing {
+            10 = GOCHILLA\FreelancerTheme\DataProcessor\FlexFormProcessor
+        }
+    }
+
+}
+
+
+# HEADER LAYOUTS
+
+lib.stdheader.10.setCurrent.htmlSpecialChars = 0
+
+lib.stdheader.3 = LOAD_REGISTER
+lib.stdheader.3.headerClass =
+lib.stdheader.3.headerClass.noTrimWrap = |
+
+lib.stdheader.stdWrap.dataWrap = |
+lib.stdheader.10.0.dataWrap = <h1>|</h1>
+lib.stdheader.10.1.dataWrap = <h1>|</h1>
+lib.stdheader.10.2.dataWrap = <h2>|</h2>
+lib.stdheader.10.3.dataWrap = <h3>|</h3>
+lib.stdheader.10.4.dataWrap = <h4>|</h4>
+lib.stdheader.10.5.dataWrap = <h5>|</h5>
+
+<INCLUDE_TYPOSCRIPT: source="DIR:typo3conf/ext/freelancer_theme/Configuration/TypoScript/Setup/" extensions="typoscript">
+
+# Set default template file for FE login
+plugin.tx_felogin_pi1.templateFile = EXT:gram/Resources/Private/Ext/felogin/felogin.html

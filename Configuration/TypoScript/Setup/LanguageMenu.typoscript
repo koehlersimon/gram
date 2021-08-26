@@ -1,0 +1,38 @@
+[globalVar = LIT:1 = {$config.showLanguageMenu}]
+    
+    ## Language Select
+    lib.menuLanguage = HMENU
+    lib.menuLanguage {
+        special = language
+        special.value = {$config.languageUids}
+        special.normalWhenNoLanguage = 0
+        wrap = <ul>|</ul>
+        1 = TMENU
+        1 {
+            noBlur = 1
+            # Standard Sprachen
+            NO = 1
+            NO {
+                linkWrap = <li class="active"><a>|</a></li>
+                stdWrap.override = {$config.languageTitles}
+                doNotLinkIt = 1
+            }
+            ACT < .NO
+            ACT.linkWrap = <li>|</li>
+            ACT{
+                stdWrap.typolink.parameter.data = page:uid
+                stdWrap.typolink.additionalParams = &L=1 || &L=0 
+                stdWrap.typolink.addQueryString = 1
+                stdWrap.typolink.addQueryString.exclude = L,id,cHash,no_cache
+                stdWrap.typolink.addQueryString.method = GET
+                stdWrap.typolink.useCacheHash = 1
+                stdWrap.typolink.no_cache = 0
+            }
+            USERDEF1 < .NO
+            USERDEF2 < .ACT
+        }
+     }
+
+     page.10.variables.menuLanguage < lib.menuLanguage
+
+[global]
