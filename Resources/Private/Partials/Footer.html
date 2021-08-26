@@ -1,0 +1,81 @@
+<footer>
+  <div class="text-center">
+    <a href="index.html"><img alt="Wolf Logo" class="img-fluid" src="img/wolf-w.svg" title="powered by wolves" width="80"></a>
+    <ul class="nav small">
+      <li class="nav-item">
+        <a class="nav-link" href="login.html">Log In</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="signup.html">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="login.html">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="profile.html">Profile Page</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+<div class="modal modal-post" id="modal-post">
+  <div class="modal-dialog">
+    <div class="modal-body">
+      <div class="modal-content">
+        <div class="row">
+          <div class="media-list col-lg-7">
+            <div class="carousel slide" data-bs-interval="false" id="post-modal-carousel">
+              <div class="carousel-inner"></div>
+              <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#post-modal-carousel" type="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" data-bs-slide="next" data-bs-target="#post-modal-carousel" type="button"><span aria-hidden="true" class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></button>
+            </div>
+          </div>
+          <div class="comment-list col-lg-5">
+            <header>
+              <img class="me-3 rounded-circle" height="40" src="img/wolf-avatar.png" width="40">
+              <p class="small m-0 lh-1">
+                <strong class="username">Username</strong><br><span class="location">Location</span>
+              </p>
+              <div class="dropdown dropstart ms-auto">
+                <button class="btn" data-bs-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></button>
+                <div class="dropdown-menu p-3 border" style="width: 240px;">
+                  <div class="list-group small">
+                    <a class="list-group-item list-group-item-action" href="#"><i class="fa fa-trash fa-fw"></i> delete</a><a class="list-group-item list-group-item-action" href="#"><i class="fa fa-edit fa-fw"></i> edit</a>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <div class="body">
+              <ul class="comments"></ul>
+            </div>
+            <footer>
+              <div class="input-group-text border-0 bg-transparent">
+                <div class="dropup">
+                  <button class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-smile"></i></button>
+                  <div class="dropdown-menu p-3 border" style="width: 240px;">
+                    <div class="list-group small">
+                      <a class="list-group-item list-group-item-action" href="#"><i class="fa fa-trash fa-fw"></i> delete</a><a class="list-group-item list-group-item-action" href="#"><i class="fa fa-edit fa-fw"></i> edit</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <textarea onkeyup="gram.textAreaAdjust(this)" placeholder="Your message..." rows="1" type="text"></textarea>
+              <div class="input-group-text border-0 bg-transparent">
+                <a href="#" class="small fw-bold text-decoration-none">Post</a>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex" id="modal-post-loader"></div>
+    </div>
+  </div>
+</div>
+<div class="position-fixed top-0 end-0 p-3" style="z-index:1056;">
+  <div aria-atomic="true" aria-live="assertive" class="toast" id="liveToast" role="alert">
+    <div class="toast-header">
+      <i class="fa fa-info-circle me-1"></i><strong class="me-auto">Bootstrap</strong><small>11 mins ago</small><button aria-label="Close" class="btn-close" data-bs-dismiss="toast" type="button"></button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
