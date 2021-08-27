@@ -1,7 +1,9 @@
 plugin.tx_gram{
     settings{
+        # cat=GRAM; type=string; label=Website Root
         root =
-        logo = 
+        # cat=GRAM; type=string; label=Logo
+        logo =
     }
     view{
         layoutRootPath = EXT:gram/Resources/Private/Layouts/
