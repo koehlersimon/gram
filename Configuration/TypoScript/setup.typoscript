@@ -249,7 +249,7 @@ lib.stdheader.10.3.dataWrap = <h3>|</h3>
 lib.stdheader.10.4.dataWrap = <h4>|</h4>
 lib.stdheader.10.5.dataWrap = <h5>|</h5>
 
-<INCLUDE_TYPOSCRIPT: source="DIR:typo3conf/ext/freelancer_theme/Configuration/TypoScript/Setup/" extensions="typoscript">
+<INCLUDE_TYPOSCRIPT: source="DIR:typo3conf/ext/gram/Configuration/TypoScript/Setup/" extensions="typoscript">
 
 # Set default template file for FE login
 plugin.tx_felogin_pi1.templateFile = EXT:gram/Resources/Private/Ext/felogin/felogin.html
