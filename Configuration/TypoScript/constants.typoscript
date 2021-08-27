@@ -1,6 +1,7 @@
 plugin.tx_gram{
     settings{
-
+        root =
+        logo = 
     }
     view{
         layoutRootPath = EXT:gram/Resources/Private/Layouts/

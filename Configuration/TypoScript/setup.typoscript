@@ -17,6 +17,11 @@ config{
 
 #page.config.contentObjectExceptionHandler = 0
 
+lib.themeSettings{
+    root = {$plugin.tx_gram.settings.root}
+    logo = {$plugin.tx_gram.settings.logo}
+}
+
 page = PAGE
 page{
 
