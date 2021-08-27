@@ -40,7 +40,7 @@ page{
         }
 
         includeCSS {
-            global = EXT:gram/Resources/Public/Css/Default.css
+            global = EXT:gram/Resources/Public/gram/css/styles.css
         }
 
         includeJS{
