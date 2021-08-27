@@ -1,0 +1,25 @@
+{
+   "id": "3",
+   "username": "Wolfram Franzlhuber",
+   "location": "Traunstein, Germany",
+   "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+   "media":[
+        {
+          "type": "image",
+          "path": "img/mountain.jpg"
+        }
+  ],
+  "discussion":{
+      "comments":{
+          "1":{
+              "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+          },
+          "2":{
+              "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+          },
+          "3":{
+              "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+          }
+      }
+  }
+}

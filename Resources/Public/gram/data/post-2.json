@@ -1,0 +1,44 @@
+{
+   "id": "2",
+   "username": "Jilmaz Siyminük",
+   "location": "Antalya, Turkey",
+   "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+   "media":[
+       {
+          "type": "image",
+          "path": "img/water.jpg"
+      },
+      {
+        "type": "image",
+        "path": "img/love.jpg"
+      },
+      {
+        "type": "image",
+        "path": "img/wolf-avatar.png"
+      },
+      {
+        "type": "image",
+        "path": "img/wolf-avatar.png"
+      },
+      {
+        "type": "image",
+        "path": "img/wolf-avatar.png"
+      },
+      {
+        "type": "image",
+        "path": "img/wolf-avatar.png"
+      },
+      {
+        "type": "image",
+        "path": "img/love.jpg"
+      },
+      {
+        "type": "image",
+        "path": "img/love.jpg"
+      },
+      {
+        "type": "image",
+        "path": "img/love.jpg"
+      }
+  ]
+}

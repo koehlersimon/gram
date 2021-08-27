@@ -1,0 +1,20 @@
+{
+   "id": "1",
+   "username": "Social Wolf Franzlhuber",
+   "location": "Melbourne, Australia",
+   "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+   "media":[
+        {
+          "type": "image",
+          "path": "img/water.jpg"
+        },
+        {
+          "type": "video",
+          "path": "https://video.twimg.com/ext_tw_video/1417237653859274758/pu/vid/720x1280/-oYmg33yFusaj1rW.mp4?tag=12"
+        },
+        {
+          "type": "image",
+          "path": "img/love.jpg"
+        }
+  ]
+}

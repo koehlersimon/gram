@@ -1,0 +1,61 @@
+{
+  "discussion":{
+      "comments":[
+          {
+              "avatar": "img/man-avatar.jpg",
+              "username": "Nadine Schaaf",
+              "content": "Lorem <a href=\"tag.html\">#hashtag</a> Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+          },
+          {
+              "avatar": "img/man-avatar.jpg",
+              "username": "Thomas Peters",
+              "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. <a href=\"tag.html\">#love</a> <a href=\"tag.html\">#demo_hashtagday_gram_yo</a>"
+          },
+          {
+              "avatar": "img/man-avatar.jpg",
+              "username": "Dr. Torben Willmann",
+              "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+          },
+          {
+              "avatar": "img/man-avatar.jpg",
+              "username": "Dr. Fauci",
+              "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+          },
+          {
+              "avatar": "img/wolf-avatar.png",
+              "username": "Peter Moose",
+              "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+          },
+          {
+              "avatar": "img/man-avatar.jpg",
+              "username": "Dr. Torben Willmann",
+              "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+          },
+          {
+              "avatar": "img/man-avatar.jpg",
+              "username": "Dr. Fauci",
+              "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+          },
+          {
+              "avatar": "img/wolf-avatar.png",
+              "username": "Peter Moose",
+              "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+          },
+          {
+              "avatar": "img/man-avatar.jpg",
+              "username": "Dr. Torben Willmann",
+              "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+          },
+          {
+              "avatar": "img/man-avatar.jpg",
+              "username": "Dr. Fauci",
+              "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+          },
+          {
+              "avatar": "img/wolf-avatar.png",
+              "username": "Peter Moose",
+              "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+          }
+      ]
+  }
+}
