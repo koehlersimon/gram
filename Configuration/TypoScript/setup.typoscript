@@ -50,8 +50,8 @@ page{
     10 = FLUIDTEMPLATE
 	10{
 
-            layoutRootPath = {$plugin.tx_freelancer_theme.view.layoutRootPath}
-            partialRootPath = {$plugin.tx_freelancer_theme.view.partialRootPath}
+            layoutRootPath = {$plugin.tx_gram.view.layoutRootPath}
+            partialRootPath = {$plugin.tx_gram.view.partialRootPath}
             settings < lib.themeSettings
 
             dataProcessing {
@@ -85,7 +85,7 @@ page{
                 20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
                 20 {
                     special = directory
-                    special.value = {$plugin.tx_freelancer_theme.settings.userMenu.rootPage}
+                    special.value = {$plugin.tx_gram.settings.userMenu.rootPage}
                     levels = 2
                     includeSpacer = 1
                     expandAll = 1
@@ -95,7 +95,7 @@ page{
 
                 25 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
                 25{
-                    languages = {$plugin.tx_freelancer_theme.settings.languageMenu.languages}
+                    languages = {$plugin.tx_gram.settings.languageMenu.languages}
                     as = menuLanguage
                 }
 
@@ -226,7 +226,7 @@ tt_content {
         }
         templateName = Navbar
         dataProcessing {
-            10 = GOCHILLA\FreelancerTheme\DataProcessor\FlexFormProcessor
+            10 = SIMONKOEHLER\Gram\DataProcessor\FlexFormProcessor
         }
     }
 
