@@ -49,7 +49,8 @@ page{
         }
 
         includeJS{
-            global = EXT:gram/Resources/Public/JavaScript/Global.js
+            global = EXT:gram/Resources/Public/gram/js/gram.js
+            app = EXT:gram/Resources/Public/gram/js/app.js
         }
 
     10 = FLUIDTEMPLATE
