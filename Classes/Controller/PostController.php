@@ -23,8 +23,8 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     /**
      * postRepository
      *
-     * @var \SIMONKOEHLER\Gram\Domain\Repository\PostRepository
      * @Inject
+     * @var \SIMONKOEHLER\Gram\Domain\Repository\PostRepository
      */
     protected $postRepository;
 
@@ -85,7 +85,6 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     public function listAction(){
         // Assign the results as variables to fluid template
         $this->view->assignMultiple([
-            'fe_user' => $fe_user,
             'settings' => $this->settings,
             'posts' => $this->postRepository->findAll()
         ]);
