@@ -34,8 +34,8 @@ page{
             viewport = width=device-width, initial-scale=1
             X-UA-Compatible = IE=11
             X-UA-Compatible.httpEquivalent = 1
-            msapplication-TileColor = #2b2b2b
-            theme-color = #2b2b2b
+            msapplication-TileColor = #eeeeee
+            theme-color = #eeeeee
             keywords {
                 stdWrap {
                     override {

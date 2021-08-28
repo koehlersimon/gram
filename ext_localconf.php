@@ -46,8 +46,20 @@ call_user_func(
          ]
       );
 
-        // Add default RTE configuration
-        //$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['eleganz'] = 'EXT:eleganz/Configuration/RTE/Default.yaml';
+      \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+        'Gram',
+        'Inbox',
+        [
+           \SIMONKOEHLER\Gram\Controller\MessageController::class => 'inbox',
+        ],
+        // non-cacheable actions
+        [
+           \SIMONKOEHLER\Gram\Controller\MessageController::class => '',
+        ]
+     );
+
+    // Add default RTE configuration
+    //$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['eleganz'] = 'EXT:eleganz/Configuration/RTE/Default.yaml';
 
     }
 );
