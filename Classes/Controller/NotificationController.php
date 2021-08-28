@@ -30,24 +30,24 @@ class NotificationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
     public function listAction(){
 
         $output['notifications'] = [
-            {
-                "username": "henry_maske_78",
-                "avatar": "img/man-avatar.jpg",
-                "message": "liked your video",
-                "time": "33m"
-            },
-            {
-                "username": "henry_maske_78",
-                "avatar": "img/man-avatar.jpg",
-                "message": "liked your video",
-                "time": "10m"
-            },
-            {
-                "username": "henry_maske_78",
-                "avatar": "img/man-avatar.jpg",
-                "message": "liked your video",
-                "time": "12d"
-            }
+            [
+                "username" => "henry_maske_78",
+                "avatar" => "img/man-avatar.jpg",
+                "message" => "liked your video",
+                "time" => "33m"
+            ],
+            [
+                "username" => "Thomas Schmidt",
+                "avatar" => "img/man-avatar.jpg",
+                "message" => "liked your video",
+                "time" => "5d"
+            ],
+            [
+                "username" => "BunnyHop78",
+                "avatar" => "img/man-avatar.jpg",
+                "message" => "liked your video",
+                "time" => "3w"
+            ]
         ];
 
         $this->view->assign('json',json_encode($output));
