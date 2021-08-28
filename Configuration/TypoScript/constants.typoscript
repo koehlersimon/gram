@@ -6,6 +6,16 @@ plugin.tx_gram{
         logo =
         # cat=GRAM; type=string; label=User Storage Folder
         userStorage =
+        # cat=GRAM; type=string; label=Login Page
+        loginPage =
+        # cat=GRAM; type=string; label=Signup Page
+        signupPage =
+        # cat=GRAM; type=string; label=Explore Page
+        explorePage =
+        # cat=GRAM; type=string; label=Tag Page
+        tagePage =
+        # cat=GRAM; type=string; label=Inbox Page
+        inboxPage =
     }
     view{
         layoutRootPath = EXT:gram/Resources/Private/Layouts/
