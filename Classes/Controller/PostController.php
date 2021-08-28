@@ -26,7 +26,7 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * @var \SIMONKOEHLER\Gram\Domain\Repository\PostRepository
      * @Inject
      */
-    protected $postRepository = null;
+    protected $postRepository;
 
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager
