@@ -29,8 +29,26 @@ class NotificationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
      */
     public function listAction(){
 
-        $output['msg'] = 'No access';
-        $output['label'] = '<i class=\"fa fa-love\"></i> No access!';
+        $output['notifications'] = [
+            {
+                "username": "henry_maske_78",
+                "avatar": "img/man-avatar.jpg",
+                "message": "liked your video",
+                "time": "33m"
+            },
+            {
+                "username": "henry_maske_78",
+                "avatar": "img/man-avatar.jpg",
+                "message": "liked your video",
+                "time": "10m"
+            },
+            {
+                "username": "henry_maske_78",
+                "avatar": "img/man-avatar.jpg",
+                "message": "liked your video",
+                "time": "12d"
+            }
+        ];
 
         $this->view->assign('json',json_encode($output));
 

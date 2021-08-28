@@ -232,7 +232,6 @@ temp.notificationsPlugin {
 notificationsPage = PAGE
 notificationsPage.typeNum = 9723
 notificationsPage{
-
     config {
         disableAllHeaderCode = 1
         xhtml_cleaning = 0
