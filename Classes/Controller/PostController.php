@@ -62,7 +62,7 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
         $this->view->assign('settings',$this->settings);
         $this->view->assign('page',$page);
-        $this->view->assign('posts',$this->postRepository->findAll());
+        $this->view->assign('posts',$this->postRepository->findAllAjax());
     }
 
     /**
