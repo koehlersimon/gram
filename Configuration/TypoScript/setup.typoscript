@@ -211,6 +211,44 @@ page{
 }
 
 
+temp.notificationsPlugin = USER
+temp.notificationsPlugin {
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+    extensionName = Gram
+    pluginName = Notifications
+    vendorName = SIMONKOEHLER
+    controller = Notification
+    action = list
+    switchableControllerActions {
+        Notification {
+            1 = list
+        }
+    }
+    view < plugin.tx_gram.view
+    persistence < plugin.tx_gram.persistence
+    settings < plugin.tx_gram.settings
+}
+
+notificationsPage = PAGE
+notificationsPage.typeNum = 9723
+notificationsPage{
+
+    config {
+        disableAllHeaderCode = 1
+        xhtml_cleaning = 0
+        admPanel = 0
+        debug = 0
+        no_cache = 1
+    }
+
+    10 = COA
+    10 {
+         15 < temp.notificationsPlugin
+    }
+
+}
+
+
 lib.contentElement {
     templateRootPaths {
         23000 = EXT:gram/Resources/Private/Ext/fluid_styled_content/Resources/Private/Templates/
