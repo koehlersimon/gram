@@ -17,5 +17,12 @@ call_user_func(
            'EXT:gram/Resources/Public/Icons/Extension.svg'
        );
 
+       \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+           'Gram',
+           'Inbox',
+           'GRAM Inbox',
+           'EXT:gram/Resources/Public/Icons/Extension.svg'
+       );
+
    }
 );
