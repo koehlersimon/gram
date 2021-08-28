@@ -4,6 +4,8 @@ plugin.tx_gram{
         root =
         # cat=GRAM; type=string; label=Logo
         logo =
+        # cat=GRAM; type=string; label=User Storage Folder
+        userStorage =
     }
     view{
         layoutRootPath = EXT:gram/Resources/Private/Layouts/

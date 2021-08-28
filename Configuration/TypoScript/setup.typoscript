@@ -106,6 +106,23 @@ page{
                     as = menuLanguage
                 }
 
+                30 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+                30 {
+                    table = fe_users
+                    pidInList.dataWrap = {$plugin.tx_gram.settings.userStorage}
+                    uidInList.stdWrap.data = TSFE:fe_user|user|uid
+                    recursive = 1
+                    where = deleted = 0
+                    as = fe_user
+                    dataProcessing {
+                        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                        10 {
+                            references.fieldName = image
+                            as = images
+                        }
+                    }
+                }
+
             }
 
             variables {
