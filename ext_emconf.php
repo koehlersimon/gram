@@ -16,7 +16,7 @@ $EM_CONF[$_EXTKEY] = [
     'modify_tables' => '',
     'clearCacheOnLoad' => 0,
     'lockType' => '',
-    'version' => '0.0.1',
+    'version' => '0.0.2',
     'constraints' => [
         'depends' => [
             'typo3' => '10.4.0-11.3.99'
@@ -27,5 +27,10 @@ $EM_CONF[$_EXTKEY] = [
         'suggests' => [
 
         ],
-    ]
+    ],
+    'autoload' => [
+        'psr-4' => [
+            'SIMONKOEHLER\\Gram\\' => 'Classes'
+        ]
+    ],
 ];
