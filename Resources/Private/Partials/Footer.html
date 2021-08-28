@@ -1,18 +1,14 @@
 <footer>
   <div class="text-center">
-    <a href="index.html"><f:image src="{settings.logo}" class="img-fluid" width="80"/></a>
+      <f:if condition="{settings.logo}">
+          <a href="index.html"><f:image src="{settings.logo}" class="img-fluid" width="80"/></a>
+      </f:if>
     <ul class="nav small">
       <li class="nav-item">
-        <a class="nav-link" href="login.html">Log In</a>
+        <f:link.page pageUid="{settings.loginPage}">Log In</f:link.page>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="signup.html">Sign Up</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="login.html">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="profile.html">Profile Page</a>
+        <f:link.page pageUid="{settings.signupPage}">Sign Up</f:link.page>
       </li>
     </ul>
   </div>
