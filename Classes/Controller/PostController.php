@@ -52,7 +52,9 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     public function galleryDataAction(){
         //$fe_user = $this->frontendUserRepository->findByUid($GLOBALS['TSFE']->fe_user->user['uid']);
         //$this->view->assign('fe_user', $fe_user);
+        $page = $this->request->getArgument('page');
         $this->view->assign('settings',$this->settings);
+        $this->view->assign('page',$page);
         //$this->view->assign('posts',$this->postRepository->findAll());
     }
 
