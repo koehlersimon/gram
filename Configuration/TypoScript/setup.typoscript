@@ -247,27 +247,9 @@ notificationsPage{
 }
 
 
-temp.galleryDataPlugin = USER
-temp.galleryDataPlugin {
-    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
-    extensionName = Gram
-    pluginName = Gallery
-    vendorName = SIMONKOEHLER
-    controller = Post
-    action = galleryData
-    switchableControllerActions {
-        Post {
-            1 = galleryData
-        }
-    }
-    view < plugin.tx_gram.view
-    persistence < plugin.tx_gram.persistence
-    settings < plugin.tx_gram.settings
-}
-
 galleryData = PAGE
-galleryData.typeNum = 9724
-galleryData{
+galleryData {
+    typeNum = 9724
     config {
         disableAllHeaderCode = 1
         xhtml_cleaning = 0
@@ -275,10 +257,25 @@ galleryData{
         debug = 0
         no_cache = 1
     }
-
     10 = COA
     10 {
-         15 < temp.galleryDataPlugin
+         15 = USER
+         15 {
+             userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+             extensionName = Gram
+             pluginName = Gallery
+             vendorName = SIMONKOEHLER
+             controller = Post
+             action = galleryData
+             switchableControllerActions {
+                 Post {
+                     1 = galleryData
+                 }
+             }
+             view < plugin.tx_gram.view
+             persistence < plugin.tx_gram.persistence
+             settings < plugin.tx_gram.settings
+         }
     }
 }
 
