@@ -26,7 +26,7 @@ call_user_func(
           'Gram',
           'Gallery',
           [
-             \SIMONKOEHLER\Gram\Controller\PostController::class => 'list',
+             \SIMONKOEHLER\Gram\Controller\PostController::class => 'list,galleryData',
           ],
           // non-cacheable actions
           [

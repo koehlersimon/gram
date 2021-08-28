@@ -254,10 +254,10 @@ temp.galleryDataPlugin {
     pluginName = Gallery
     vendorName = SIMONKOEHLER
     controller = Post
-    action = gallery
+    action = galleryData
     switchableControllerActions {
         Post {
-            1 = gallery
+            1 = galleryData
         }
     }
     view < plugin.tx_gram.view

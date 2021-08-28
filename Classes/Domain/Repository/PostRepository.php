@@ -12,6 +12,12 @@ class PostRepository extends \TYPO3\CMS\Extbase\Persistence\Repository{
 		'crdate' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
 	);
 
+	public function galleryDataAction(){
+		$query = $this->createQuery();
+	    $query->setLimit(9);
+	    return $query->execute();
+	}
+
 	public function findAllAjax(){
 		$query = $this->createQuery();
 	    $query->setLimit(5);
