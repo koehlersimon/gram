@@ -34,6 +34,18 @@ call_user_func(
           ]
        );
 
+       \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+         'Gram',
+         'Notifications',
+         [
+            \SIMONKOEHLER\Gram\Controller\NotificationController::class => 'list',
+         ],
+         // non-cacheable actions
+         [
+            \SIMONKOEHLER\Gram\Controller\NotificationController::class => '',
+         ]
+      );
+
         // Add default RTE configuration
         //$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['eleganz'] = 'EXT:eleganz/Configuration/RTE/Default.yaml';
 
