@@ -49,7 +49,7 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      *
      * @return void
      */
-    public function listAjaxAction(){
+    public function galleryDataAction(){
         $fe_user = $this->frontendUserRepository->findByUid($GLOBALS['TSFE']->fe_user->user['uid']);
         $this->view->assign('fe_user', $fe_user);
         $this->view->assign('settings',$this->settings);
