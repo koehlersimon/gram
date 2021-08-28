@@ -16,7 +16,7 @@
           <a class="nav-link active" href="index.html"><i class="fa fa-home fa-fw text-primary"></i> <span class="d-inline d-lg-none">Homepage</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="inbox.html"><i class="fa fa-paper-plane fa-fw"></i> <span class="d-inline d-lg-none">Inbox</span></a>
+          <f:link.page pageUid="{settings.inboxPage}" class="nav-link"><i class="fa fa-paper-plane fa-fw"></i> <span class="d-inline d-lg-none">Inbox</span></f:link.page>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="explore.html"><i class="fa fa-compass fa-fw"></i> <span class="d-inline d-lg-none">Explore</span></a>
@@ -40,7 +40,7 @@
             </li>
           </ul>
         </li>
-        
+
         <f:security.ifAuthenticated>
         <li class="nav-item dropdown">
           <a class="nav-link" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
