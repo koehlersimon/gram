@@ -32,19 +32,19 @@ class NotificationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
         $output['notifications'] = [
             [
                 "username" => "henry_maske_78",
-                "avatar" => "img/man-avatar.jpg",
+                "avatar" => "https://via.placeholder.com/40x40",
                 "message" => "liked your video",
                 "time" => "33m"
             ],
             [
                 "username" => "Thomas Schmidt",
-                "avatar" => "img/man-avatar.jpg",
+                "avatar" => "https://via.placeholder.com/40x40",
                 "message" => "liked your video",
                 "time" => "5d"
             ],
             [
                 "username" => "BunnyHop78",
-                "avatar" => "img/man-avatar.jpg",
+                "avatar" => "https://via.placeholder.com/40x40",
                 "message" => "liked your video",
                 "time" => "3w"
             ]
