@@ -13,13 +13,13 @@
       </form>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="index.html"><i class="fa fa-home fa-fw text-primary"></i> <span class="d-inline d-lg-none">Homepage</span></a>
+          <f:link.page pageUid="{settings.root}" class="nav-link active"><i class="fa fa-home fa-fw text-primary"></i> <span class="d-inline d-lg-none">Homepage</span></f:link.page>
         </li>
         <li class="nav-item">
           <f:link.page pageUid="{settings.inboxPage}" class="nav-link"><i class="fa fa-paper-plane fa-fw"></i> <span class="d-inline d-lg-none">Inbox</span></f:link.page>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="explore.html"><i class="fa fa-compass fa-fw"></i> <span class="d-inline d-lg-none">Explore</span></a>
+          <f:link.page pageUid="{settings.explorePage}" class="nav-link"><i class="fa fa-compass fa-fw"></i> <span class="d-inline d-lg-none">Explore</span></f:link.page>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button"><i class="fa fa-heart fa-fw"></i> <span class="d-inline d-lg-none">Likes</span></a>
