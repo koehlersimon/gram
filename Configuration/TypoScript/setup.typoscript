@@ -20,6 +20,10 @@ config{
 lib.themeSettings{
     root = {$plugin.tx_gram.settings.root}
     logo = {$plugin.tx_gram.settings.logo}
+    loginPage = {$plugin.tx_gram.settings.loginPage}
+    signupPage = {$plugin.tx_gram.settings.signupPage}
+    tagePage = {$plugin.tx_gram.settings.tagePage}
+    inboxPage = {$plugin.tx_gram.settings.inboxPage}
 }
 
 page = PAGE
