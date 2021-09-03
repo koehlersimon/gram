@@ -5,7 +5,10 @@ use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 class Post extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
 
-    /** @var int */
+    /*
+    *
+    * @var int
+    */
     protected $crdate;
 
     /** @var int */
