@@ -85,8 +85,7 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     public function listAction(){
         // Assign the results as variables to fluid template
         $this->view->assignMultiple([
-            'settings' => $this->settings,
-            'posts' => $this->postRepository->findAll()
+            'settings' => $this->settings
         ]);
     }
 
