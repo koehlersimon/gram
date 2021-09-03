@@ -112,8 +112,6 @@ class PostRepository extends \TYPO3\CMS\Extbase\Persistence\Repository{
 
 	}
 
-
-
 	public function callAPI($method, $url, $data){
 	   $curl = curl_init();
 	   switch ($method){
