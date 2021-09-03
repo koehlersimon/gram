@@ -1,5 +1,6 @@
 <?php
 namespace SIMONKOEHLER\Gram\Controller;
+use SIMONKOEHLER\Gram\Domain\Repository\PostRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Annotation\Inject;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
@@ -30,6 +31,11 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * @var \TYPO3\CMS\Core\TypoScript\Parser\ConstantConfigurationParser
      */
     private $configurationParser;
+
+    /**
+     * @var PostRepository
+     */
+    protected $postRepository;
 
 
     public function __construct(ConstantConfigurationParser $configurationParser = null, PostRepository $postRepository){
