@@ -21,4 +21,7 @@ plugin.tx_gram{
         layoutRootPath = EXT:gram/Resources/Private/Layouts/
         partialRootPath = EXT:gram/Resources/Private/Partials/
     }
+    persistence {
+        storagePid =
+    }
 }
