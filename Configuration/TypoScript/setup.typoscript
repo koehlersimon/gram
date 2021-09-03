@@ -350,4 +350,11 @@ lib.stdheader.10.5.dataWrap = <h5>|</h5>
 <INCLUDE_TYPOSCRIPT: source="DIR:typo3conf/ext/gram/Configuration/TypoScript/Setup/" extensions="typoscript">
 
 # Set default template file for FE login
-plugin.tx_felogin_pi1.templateFile = EXT:gram/Resources/Private/Ext/felogin/felogin.html
+#plugin.tx_felogin_pi1.templateFile = EXT:gram/Resources/Private/Ext/felogin/felogin.html
+
+// Set template path for Frontend Login
+plugin.tx_felogin_login {
+    view {
+        templateRootPaths.900 = EXT:bootstrap_package_panamaauswandern/Resources/Private/Templates/Felogin/
+    }
+}
