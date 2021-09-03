@@ -61,7 +61,20 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
         $this->view->assign('settings',$this->settings);
         $this->view->assign('page',$page);
-        $this->view->assign('posts',$this->postRepository->findAllAjax($page));
+
+        $posts = $this->postRepository->findAllAjax($page);
+
+        $data = [
+            'username' => 'Demo Man',
+            'items' => []
+        ];
+
+        foreach ($posts as $post) {
+            $data['items'][] = $post;
+        }
+
+        $this->view->assign('data',json_encode($data));
+
     }
 
     /**
