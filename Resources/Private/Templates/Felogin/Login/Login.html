@@ -9,45 +9,47 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4 col-lg-2 offset-md-1 offset-lg-3 d-none d-md-inline">
-      <img alt="Phone" class="img-fluid w-100" src="img/login-smartphone.png">
+        <img alt="Phone" class="img-fluid w-100" src="img/login-smartphone.png">
     </div>
     <div class="col-md-6 col-lg-4 d-flex align-items-center justify-content-center">
-      <div class="w-100">
+        <div class="w-100">
 
-          <f:if condition="{messageKey}">
-          <div>
-              <h3><f:render partial="RenderLabelOrMessage" arguments="{key: '{messageKey}_header'}"/></h3>
-              <p><f:render partial="RenderLabelOrMessage" arguments="{key: '{messageKey}_message'}"/></p>
-          </div>
-          </f:if>
+            <div class="bg-white border py-4 px-5">
 
-        <f:if condition="{onSubmit}">
-            <f:then>
-                <f:form target="_top" fieldNamePrefix="" action="login" onsubmit="{onSubmit}" class="bg-white border py-4 px-5">
-                    <f:render section="content" arguments="{_all}"/>
-                </f:form>
-            </f:then>
-            <f:else>
-                <f:form target="_top" fieldNamePrefix="" action="login" class="bg-white border py-4 px-5">
-                    <f:render section="content" arguments="{_all}"/>
-                </f:form>
-            </f:else>
-        </f:if>
-        <f:if condition="{settings.showForgotPassword}">
-            <f:link.action action="recovery" controller="PasswordRecovery">
-                <f:render partial="RenderLabelOrMessage" arguments="{key: 'forgot_header'}"/>
-            </f:link.action>
-        </f:if>
+                <f:if condition="{messageKey}">
+                    <div class="text-center">
+                      <h4><f:render partial="RenderLabelOrMessage" arguments="{key: '{messageKey}_header'}"/></h4>
+                      <p><f:render partial="RenderLabelOrMessage" arguments="{key: '{messageKey}_message'}"/></p>
+                    </div>
+                </f:if>
 
-        <div class="bg-white py-4 px-5 text-center border">
-          <p class="m-0">
-            Don't have an account? <a href="signup.html">Sign Up</a>
-          </p>
+                <f:if condition="{onSubmit}">
+                    <f:then>
+                        <f:form target="_top" fieldNamePrefix="" action="login" onsubmit="{onSubmit}">
+                            <f:render section="content" arguments="{_all}"/>
+                        </f:form>
+                    </f:then>
+                    <f:else>
+                        <f:form target="_top" fieldNamePrefix="" action="login">
+                            <f:render section="content" arguments="{_all}"/>
+                        </f:form>
+                    </f:else>
+                </f:if>
+                <f:if condition="{settings.showForgotPassword}">
+                    <f:link.action action="recovery" controller="PasswordRecovery">
+                        <f:render partial="RenderLabelOrMessage" arguments="{key: 'forgot_header'}"/>
+                    </f:link.action>
+                </f:if>
+
+            </div>
+
+            <div class="bg-white py-4 px-5 text-center border">
+              <p class="m-0">
+                Don't have an account? <f:link.page pageUid="{settings.signupPage}">Sign Up</f:link.page>
+              </p>
+            </div>
+
         </div>
-        <p class="py-4 text-center">
-          Get the App
-        </p>
-      </div>
     </div>
   </div>
 </div>
