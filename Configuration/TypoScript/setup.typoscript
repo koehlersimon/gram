@@ -355,6 +355,6 @@ lib.stdheader.10.5.dataWrap = <h5>|</h5>
 // Set template path for Frontend Login
 plugin.tx_felogin_login {
     view {
-        templateRootPaths.900 = EXT:bootstrap_package_panamaauswandern/Resources/Private/Templates/Felogin/
+        templateRootPaths.900 = EXT:gram/Resources/Private/Templates/Felogin/
     }
 }
