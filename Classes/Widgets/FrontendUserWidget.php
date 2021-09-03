@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace SIMONKOEHLER\Osp\Widgets;
+namespace SIMONKOEHLER\Gram\Widgets;
 
 use TYPO3\CMS\Core\Localization\LanguageService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -77,7 +77,7 @@ class FrontendUserWidget implements WidgetInterface, AdditionalCssInterface
     public function getCssFiles(): array
     {
         return [
-            'EXT:osp/Resources/Public/Css/frontendUserWidget.css',
+            'EXT:gram/Resources/Public/Css/frontendUserWidget.css',
         ];
     }
 

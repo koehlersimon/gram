@@ -100,7 +100,7 @@ class PostRepository extends \TYPO3\CMS\Extbase\Persistence\Repository{
 
 		$queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('fe_users');
 		$statement = $queryBuilder
-		   ->select('uid', 'tx_osp_url')
+		   ->select('uid', 'tx_gram_url')
 		   ->from('fe_users')
 		   ->where(
 		      $queryBuilder->expr()->eq('uid', $queryBuilder->createNamedParameter($fe_user_uid, \PDO::PARAM_INT))

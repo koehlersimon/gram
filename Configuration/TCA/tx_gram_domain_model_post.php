@@ -1,7 +1,7 @@
 <?php
 return [
     'ctrl' => [
-        'title' => 'LLL:EXT:osp/Resources/Private/Language/locallang_db.xlf:tx_gram_domain_model_post',
+        'title' => 'LLL:EXT:gram/Resources/Private/Language/locallang_db.xlf:tx_gram_domain_model_post',
         'label' => 'content',
         'label_alt' => 'owner',
         'label_alt_force' => '1',

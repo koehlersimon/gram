@@ -54,7 +54,7 @@ class LatestPostsWidget implements WidgetInterface, AdditionalCssInterface
         $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_osp_domain_model_post');
         $statement = $queryBuilder
            ->select('*')
-           ->from('tx_osp_domain_model_post')
+           ->from('tx_gram_domain_model_post')
            ->orderBy('crdate','DESC')
            ->setMaxResults(4)
            ->where(
@@ -77,7 +77,7 @@ class LatestPostsWidget implements WidgetInterface, AdditionalCssInterface
     public function getCssFiles(): array
     {
         return [
-            'EXT:osp/Resources/Public/Css/frontendUserWidget.css',
+            'EXT:gram/Resources/Public/Css/frontendUserWidget.css',
         ];
     }
 

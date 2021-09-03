@@ -1,5 +1,5 @@
 <?php
-namespace SIMONKOEHLER\Osp\ExpressionLanguage;
+namespace SIMONKOEHLER\Gram\ExpressionLanguage;
 use TYPO3\CMS\Core\ExpressionLanguage\AbstractProvider;
 
 class CountryCondition extends AbstractProvider {

@@ -9,10 +9,10 @@ class LikeRepository extends \TYPO3\CMS\Extbase\Persistence\Repository{
 
     public function getLikesFromPost($user,$record){
 
-        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_osp_domain_model_like');
+        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_gram_domain_model_like');
         $count = $queryBuilder
            ->count('uid')
-           ->from('tx_osp_domain_model_like')
+           ->from('tx_gram_domain_model_like')
            ->where(
               $queryBuilder->expr()->eq('owner',$queryBuilder->createNamedParameter($user, \PDO::PARAM_INT))
             )

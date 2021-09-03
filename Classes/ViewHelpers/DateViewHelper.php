@@ -1,5 +1,5 @@
 <?php
-namespace SIMONKOEHLER\Osp\ViewHelpers;
+namespace SIMONKOEHLER\Gram\ViewHelpers;
 
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;

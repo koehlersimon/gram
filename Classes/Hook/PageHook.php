@@ -1,5 +1,5 @@
 <?php
-namespace SIMONKOEHLER\Osp\Hook;
+namespace SIMONKOEHLER\Gram\Hook;
 
 use TYPO3\CMS\Backend\Controller\PageLayoutController;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -28,7 +28,7 @@ class PageHook
         $this->view = GeneralUtility::makeInstance(StandaloneView::class);
         $this->view->setFormat('html');
 
-        $resourcesPath = 'EXT:osp/Resources/';
+        $resourcesPath = 'EXT:gram/Resources/';
         $this->view->setTemplatePathAndFilename($resourcesPath . 'Private/Backend/Templates/PageHook.html');
         $this->view->assign('files', $fileObjects);
         $this->view->assign('page', $parentObject->pageinfo);
