@@ -14,33 +14,9 @@ class PostRepository extends \TYPO3\CMS\Extbase\Persistence\Repository{
 		'crdate' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
 	);
 
-	// Example for repository wide settings
-   public function initializeObject() {
-      /** @var Typo3QuerySettings $querySettings */
-      $querySettings = new Typo3QuerySettings();
-
-      // don't add the pid constraint
-      $querySettings->setRespectStoragePage(false);
-      // set the storagePids to respect
-      // $querySettings->setStoragePageIds(array(1, 26, 989));
-
-      // define the enablecolumn fields to be ignored, true ignores all of them
-      //$querySettings->setIgnoreEnableFields(TRUE);
-
-      // define single fields to be ignored
-      // $querySettings->setEnableFieldsToBeIgnored(array('disabled','starttime'));
-
-      // add deleted rows to the result
-      // $querySettings->setIncludeDeleted(TRUE);
-
-      // don't add sys_language_uid constraint
-      // $querySettings->setRespectSysLanguage(FALSE);
-
-      $this->setDefaultQuerySettings($querySettings);
-   }
-
 	public function findAllAjax(){
 		$query = $this->createQuery();
+		$query->getQuerySettings()->setRespectStoragePage(FALSE);
 	    $query->setLimit(5);
 	    return $query->execute();
 	}
