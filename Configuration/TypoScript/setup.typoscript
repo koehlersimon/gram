@@ -35,6 +35,7 @@ page{
             X-UA-Compatible = IE=11
             X-UA-Compatible.httpEquivalent = 1
             msapplication-TileColor = #eeeeee
+            apple-mobile-web-app-capable = yes
             theme-color = #eeeeee
             keywords {
                 stdWrap {
