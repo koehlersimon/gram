@@ -21,14 +21,6 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     protected $frontendUserRepository = NULL;
 
     /**
-     * postRepository
-     *
-     * @var \SIMONKOEHLER\Gram\Domain\Repository\PostRepository
-     * @Inject
-     */
-    protected $postRepository;
-
-    /**
      * @var \TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager
      * @Inject
      */
@@ -40,8 +32,9 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     private $configurationParser;
 
 
-    public function __construct(ConstantConfigurationParser $configurationParser = null){
+    public function __construct(ConstantConfigurationParser $configurationParser = null, PostRepository $postRepository){
         $this->configurationParser = $configurationParser ?? GeneralUtility::makeInstance(ConstantConfigurationParser::class);
+        $this->postRepository = $postRepository;
     }
 
     /**
