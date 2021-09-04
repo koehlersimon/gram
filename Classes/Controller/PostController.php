@@ -113,6 +113,7 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
         $this->view->assign('data',json_encode($data));
         $this->view->assign('settings',$this->settings);
+        $this->view->assign('posts',$posts);
     }
 
     /**
