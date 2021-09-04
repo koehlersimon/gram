@@ -24,12 +24,12 @@
     </f:comment>
 
     <f:for each="{posts}" as="post" iteration="count">
-        <f:if condition="{count} == 1">
+        <f:if condition="{count} === 1">
             <div class="col">
                 <f:render section="link" arguments="{classes:'',likes:'1000',comments:'98'}"/>
         </f:if>
 
-        <f:if condition="{count} == 2">
+        <f:if condition="{count} === 2">
                 <f:render section="link" arguments="{classes:'',likes:'2000',comments:'98'}"/>
             </div>
         </f:if>
