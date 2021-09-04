@@ -19,7 +19,7 @@ class PostRepository extends \TYPO3\CMS\Extbase\Persistence\Repository{
 		$query->getQuerySettings()->setRespectStoragePage(FALSE);
 		$query->setOffset(0);
 	    $query->setLimit(5);
-	    return $query->execute()->toArray();
+	    return $query->execute();
 	}
 
 	public function findByOwner($owner){
