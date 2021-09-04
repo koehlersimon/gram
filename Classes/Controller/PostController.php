@@ -72,7 +72,8 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         foreach ($posts as $post) {
             $data['items'][] = [
                 'id' => $post->getUid(),
-                'likecount' => $post->getLikes()
+                'likecount' => $post->getLikes(),
+                'thumbnail' => $post->getMedia()
             ];
         }
 
