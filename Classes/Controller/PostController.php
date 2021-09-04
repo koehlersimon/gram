@@ -59,16 +59,12 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
             $page = 1;
         }
 
-        $this->view->assign('settings',$this->settings);
-        $this->view->assign('page',$page);
-
-        $posts = $this->postRepository->findAllAjax($page);
-
         $data = [
             'username' => 'Demo Man',
             'items' => []
         ];
 
+        $posts = $this->postRepository->findAllAjax($page);
         foreach ($posts as $post) {
             $data['items'][] = [
                 'id' => $post->getUid(),
@@ -78,6 +74,8 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         }
 
         $this->view->assign('data',json_encode($data));
+        $this->view->assign('settings',$this->settings);
+        $this->view->assign('page',$page);
 
     }
 
@@ -91,6 +89,30 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         $this->view->assign('fe_user', $fe_user);
         $this->view->assign('settings',$this->settings);
         $this->view->assign('posts',$this->postRepository->findByOwner($GLOBALS['TSFE']->fe_user->user['uid']));
+    }
+
+    /**
+     * action explore
+     *
+     * @return void
+     */
+    public function exploreAction(){
+        $data = [
+            'username' => 'Demo Man',
+            'items' => []
+        ];
+
+        $posts = $this->postRepository->findAll();
+        foreach ($posts as $post) {
+            $data['items'][] = [
+                'id' => $post->getUid(),
+                'likecount' => $post->getLikes(),
+                'thumbnail' => $post->getMedia()
+            ];
+        }
+
+        $this->view->assign('data',json_encode($data));
+        $this->view->assign('settings',$this->settings);
     }
 
     /**

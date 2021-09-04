@@ -24,6 +24,18 @@ call_user_func(
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
           'Gram',
+          'Explore',
+          [
+             \SIMONKOEHLER\Gram\Controller\PostController::class => 'explore',
+          ],
+          // non-cacheable actions
+          [
+             \SIMONKOEHLER\Gram\Controller\PostController::class => '',
+          ]
+       );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+          'Gram',
           'Gallery',
           [
              \SIMONKOEHLER\Gram\Controller\PostController::class => 'list,galleryData',
