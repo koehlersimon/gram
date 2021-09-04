@@ -13,7 +13,7 @@ plugin.tx_gram{
         # cat=GRAM; type=string; label=Explore Page
         explorePage =
         # cat=GRAM; type=string; label=Tag Page
-        tagePage =
+        tagPage =
         # cat=GRAM; type=string; label=Inbox Page
         inboxPage =
     }
