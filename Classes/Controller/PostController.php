@@ -97,21 +97,7 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * @return void
      */
     public function exploreAction(){
-        $data = [
-            'username' => 'Demo Man',
-            'items' => []
-        ];
-
         $posts = $this->postRepository->findAll();
-        foreach ($posts as $post) {
-            $data['items'][] = [
-                'id' => $post->getUid(),
-                'likecount' => $post->getLikes(),
-                'thumbnail' => $post->getMedia()
-            ];
-        }
-
-        $this->view->assign('data',json_encode($data));
         $this->view->assign('settings',$this->settings);
         $this->view->assign('posts',$posts);
     }
