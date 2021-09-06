@@ -47,7 +47,9 @@ page{
         }
 
         headerData{
-
+            20 = TEXT
+            20.wrap = <script>window.gram_config = { | }</script>
+            20.value = 'baseUrl': '{$plugin.tx_gram.settings.baseUrl}','galleryUrl': '{$plugin.tx_gram.settings.galleryUrl}','notificationsUrl':'{$plugin.tx_gram.settings.notificationsUrl}','notificationInterval':{$plugin.tx_gram.settings.notificationInterval}
         }
 
         includeCSS {
@@ -195,6 +197,9 @@ page{
 
                 rootPageId = TEXT
                 rootPageId.data = site:rootPageId
+
+                version = TEXT
+                version.value = 1.0.0
 
                 pageHeader = TEXT
                 pageHeader {
