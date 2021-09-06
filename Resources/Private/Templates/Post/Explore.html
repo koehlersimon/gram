@@ -2,25 +2,26 @@
   <div class="gallery-grid explore">
 
     <f:for each="{posts}" as="post" iteration="count">
+
         <f:if condition="{count.index} == 0">
             <div class="col">
-                <f:render section="link" arguments="{classes:'mb-2 mb-md-3 mb-lg-4',likes:'1000',comments:'98'}"/>
+                <f:render section="link" arguments="{classes:'mb-2 mb-md-3 mb-lg-4',likes:post.likes,comments:'98'}"/>
         </f:if>
 
         <f:if condition="{count.index} == 1">
-                <f:render section="link" arguments="{likes:'2000',comments:'98'}"/>
+                <f:render section="link" arguments="{likes:post.likes,comments:'98'}"/>
             </div>
         </f:if>
 
         <f:if condition="{count.index} == 2">
             <div class="col">
-                <f:render section="link" arguments="{classes:'',likes:'23',comments:'98',imgclasses:'w-100'}"/>
+                <f:render section="link" arguments="{classes:'',likes:post.likes,comments:'98',imgclasses:'w-100'}"/>
             </div>
         </f:if>
 
         <f:if condition="{count.index} > 2">
             <div class="col">
-                <f:render section="link" arguments="{likes:'2000',comments:'98'}"/>
+                <f:render section="link" arguments="{likes:post.likes,comments:'98'}"/>
             </div>
         </f:if>
 
