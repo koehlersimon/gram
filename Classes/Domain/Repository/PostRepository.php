@@ -24,7 +24,7 @@ class PostRepository extends \TYPO3\CMS\Extbase\Persistence\Repository{
 		$query = $this->createQuery();
 		$query->getQuerySettings()->setRespectStoragePage(FALSE);
 		$query->setOffset(0);
-	    $query->setLimit(5);
+	    $query->setLimit(9);
 	    return $query->execute();
 	}
 
