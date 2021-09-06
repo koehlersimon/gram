@@ -6,6 +6,7 @@ use TYPO3\CMS\Extbase\Annotation\Inject;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\TypoScript\Parser\ConstantConfigurationParser;
+use TYPO3\CMS\Extbase\Service\ImageService;
 
 /**
  * PostController
@@ -20,6 +21,11 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * @Inject
      */
     protected $frontendUserRepository = NULL;
+
+    /**
+     * @var ImageService
+     */
+    protected $imageService;
 
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager
@@ -38,9 +44,10 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     protected $postRepository;
 
 
-    public function __construct(ConstantConfigurationParser $configurationParser = null, PostRepository $postRepository){
+    public function __construct(ConstantConfigurationParser $configurationParser = null, PostRepository $postRepository, ImageService $imageService){
         $this->configurationParser = $configurationParser ?? GeneralUtility::makeInstance(ConstantConfigurationParser::class);
         $this->postRepository = $postRepository;
+        $this->imageService = $imageService;
     }
 
     /**
@@ -66,10 +73,14 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
         $posts = $this->postRepository->findAllAjax($page);
         foreach ($posts as $post) {
+            $imagePath = $post->getMedia()[0]->getOriginalResource()->getOriginalFile()->getPublicUrl();
+            $processedImage = $this->imageService->applyProcessingInstructions($this->imageService->getImage($imagePath, null, false), ['width' => '416c','height' => '416c']);
+            $thumbnail = $this->request->getBaseUri().trim($this->imageService->getImageUri($processedImage),'/');
             $data['items'][] = [
                 'id' => $post->getUid(),
                 'likecount' => $post->getLikes(),
-                'thumbnail' => $post->getMedia()
+                'thumbnail' => $thumbnail,
+                'commentcount' => 263
             ];
         }
 
