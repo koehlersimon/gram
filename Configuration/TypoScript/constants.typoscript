@@ -16,6 +16,14 @@ plugin.tx_gram{
         tagPage =
         # cat=GRAM; type=string; label=Inbox Page
         inboxPage =
+        # cat=GRAM; type=string; label=Base Url
+        baseUrl = https://panama-auswandern.com/gram/
+        # cat=GRAM; type=string; label=Gallery Url
+        galleryUrl = https://panama-auswandern.com/gram?type=9724&tx_gram_gallery[page]=###PAGE###
+        # cat=GRAM; type=string; label=Notifications Url
+        notificationsUrl = https://panama-auswandern.com/gram/notifications
+        # cat=GRAM; type=int; label=Notification Interval
+        notificationInterval = 40000
     }
     view{
         layoutRootPath = EXT:gram/Resources/Private/Layouts/
