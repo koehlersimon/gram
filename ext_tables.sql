@@ -6,6 +6,7 @@ CREATE TABLE tx_gram_domain_model_post (
 	postdate int(11) unsigned DEFAULT '0' NOT NULL,
 	content text NOT NULL,
 	likes int(11) unsigned DEFAULT '0' NOT NULL,
+	comments int(11) unsigned DEFAULT '0' NOT NULL,
 	owner varchar(100) DEFAULT '0' NOT NULL,
 	media varchar(100) DEFAULT '0' NOT NULL,
 
