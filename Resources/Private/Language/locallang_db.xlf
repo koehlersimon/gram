@@ -1,12 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<T3locallang>
-	<meta type="array">
-		<description>Database labels</description>
-		<type>database</type>
-	</meta>
-	<data type="array">
-		<languageKey index="default" type="array">
-			<label index="tx_gram_domain_model_post">Post</label>
-		</languageKey>
-	</data>
-</T3locallang>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-07-19T14:26:00Z" product-name="gram">
+		<header/>
+		<body>
+
+
+			<trans-unit id="tx_gram_domain_model_post">
+				<source>Post</source>
+			</trans-unit>
+			<trans-unit id="tx_gram_domain_model_post.content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="tx_gram_domain_model_post.likes">
+				<source>Likes</source>
+			</trans-unit>
+
+
+			<trans-unit id="tx_gram_domain_model_like">
+				<source>Like</source>
+			</trans-unit>
+			<trans-unit id="tx_gram_domain_model_like.owner">
+				<source>Owner</source>
+			</trans-unit>
+			<trans-unit id="tx_gram_domain_model_like.parent">
+				<source>Parent Table Uid</source>
+			</trans-unit>
+			<trans-unit id="tx_gram_domain_model_like.parent_type">
+				<source>Parent Table Type</source>
+			</trans-unit>
+
+
+			<trans-unit id="tx_gram_domain_model_comment">
+				<source>Comment</source>
+			</trans-unit>
+			<trans-unit id="tx_gram_domain_model_comment.content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="tx_gram_domain_model_comment.likes">
+				<source>Likes</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>
