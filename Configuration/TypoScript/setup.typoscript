@@ -50,10 +50,14 @@ page{
             20 = TEXT
             20.wrap = <script>window.gram_config = { | }</script>
             20.value = 'baseUrl': '{$plugin.tx_gram.settings.baseUrl}','galleryUrl': '{$plugin.tx_gram.settings.galleryUrl}','notificationsUrl':'{$plugin.tx_gram.settings.notificationsUrl}','notificationInterval':{$plugin.tx_gram.settings.notificationInterval}
+
+            40 = TEXT
+            40.wrap = <link rel="stylesheet" href="|"/>
+            40.value = {$plugin.tx_gram.settings.baseUrl}typo3conf/gram/Resources/Public/gram/css/styles.css
         }
 
         includeCSS {
-            global = EXT:gram/Resources/Public/gram/css/styles.css
+            #global = EXT:gram/Resources/Public/gram/css/styles.css
         }
 
         includeJS{
