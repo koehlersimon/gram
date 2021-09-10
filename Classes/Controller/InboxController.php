@@ -14,7 +14,7 @@ class InboxController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      *
      * @return void
      */
-    public function inboxAction(){
+    public function interfaceAction(){
 
     }
 
