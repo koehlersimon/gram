@@ -61,7 +61,7 @@ page{
         }
 
         includeJS{
-            bootstrap = EXT:gram/Resources/Public/gram/libs/bootstrap-5.1.0/dist/js/bootstrap.bundle.min.js
+            bootstrap = EXT:gram/Resources/Public/gram/libs/bootstrap-5.1.1/dist/js/bootstrap.bundle.min.js
             global = EXT:gram/Resources/Public/gram/js/gram.js
             app = EXT:gram/Resources/Public/gram/js/app.js
         }
