@@ -62,11 +62,11 @@ call_user_func(
         'Gram',
         'Inbox',
         [
-           \SIMONKOEHLER\Gram\Controller\MessageController::class => 'inbox',
+           \SIMONKOEHLER\Gram\Controller\InboxController::class => 'interface',
         ],
         // non-cacheable actions
         [
-           \SIMONKOEHLER\Gram\Controller\MessageController::class => '',
+           \SIMONKOEHLER\Gram\Controller\InboxController::class => '',
         ]
      );
 
