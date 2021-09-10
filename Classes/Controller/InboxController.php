@@ -18,5 +18,14 @@ class InboxController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
     }
 
+    /**
+     * action inbox
+     *
+     * @return void
+     */
+    public function chatAction(){
+        $this->view->assign('chat','demo...');
+    }
+
 
 }
