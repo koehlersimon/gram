@@ -52,7 +52,7 @@ page{
             20.value = 'baseUrl': '{$plugin.tx_gram.settings.baseUrl}','galleryUrl': '{$plugin.tx_gram.settings.galleryUrl}','notificationsUrl':'{$plugin.tx_gram.settings.notificationsUrl}','notificationInterval':{$plugin.tx_gram.settings.notificationInterval}
 
             40 = TEXT
-            40.wrap = <link rel="stylesheet" href="|"/>
+            40.wrap = <link rel="stylesheet" href="|" id="styles"/>
             40.value = {$plugin.tx_gram.settings.baseUrl}typo3conf/gram/Resources/Public/gram/css/styles.css
         }
 
