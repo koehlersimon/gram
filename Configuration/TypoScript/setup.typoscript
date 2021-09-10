@@ -53,7 +53,7 @@ page{
             20.value = 'baseUrl': '{$plugin.tx_gram.settings.baseUrl}','galleryUrl': '{$plugin.tx_gram.settings.galleryUrl}','notificationsUrl':'{$plugin.tx_gram.settings.notificationsUrl}','notificationInterval':{$plugin.tx_gram.settings.notificationInterval}
 
             40 = TEXT
-            40.value = <link rel="stylesheet" href="{$plugin.tx_gram.settings.cssPath}styles.css" id="styles" data-dark="{$plugin.tx_gram.settings.cssPath}styles-dark.css"/>
+            40.value = <link rel="stylesheet" href="{$plugin.tx_gram.settings.cssPath}styles.css" id="styles" data-light="{$plugin.tx_gram.settings.cssPath}styles.css" data-dark="{$plugin.tx_gram.settings.cssPath}styles-dark.css"/>
         }
 
         includeCSS {
