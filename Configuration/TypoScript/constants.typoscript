@@ -28,7 +28,7 @@ plugin.tx_gram{
         notificationsUrl = https://panama-auswandern.com/gram/notifications
         # cat=GRAM; type=int; label=Notification Interval
         notificationInterval = 40000
-        # cat=GRAM; type=int; label=CSS Path
+        # cat=GRAM; type=int; label=CSS Path (relative from baseUrl)
         cssPath = typo3conf/ext/gram/Resources/Public/gram/css/
     }
     view{
