@@ -6,7 +6,7 @@ use TYPO3\CMS\Backend\Utility\BackendUtility;
 /**
  * MessageController
  */
-class MessageController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+class ChatController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
 
     /**
