@@ -25,6 +25,7 @@ lib.themeSettings{
     tagPage = {$plugin.tx_gram.settings.tagPage}
     inboxPage = {$plugin.tx_gram.settings.inboxPage}
     explorePage = {$plugin.tx_gram.settings.explorePage}
+    cssPath = {$plugin.tx_gram.settings.cssPath}
 }
 
 page = PAGE
@@ -52,8 +53,7 @@ page{
             20.value = 'baseUrl': '{$plugin.tx_gram.settings.baseUrl}','galleryUrl': '{$plugin.tx_gram.settings.galleryUrl}','notificationsUrl':'{$plugin.tx_gram.settings.notificationsUrl}','notificationInterval':{$plugin.tx_gram.settings.notificationInterval}
 
             40 = TEXT
-            40.wrap = <link rel="stylesheet" href="|" id="styles"/>
-            40.value = {$plugin.tx_gram.settings.baseUrl}typo3conf/gram/Resources/Public/gram/css/styles.css
+            40.value = <link rel="stylesheet" href="{$plugin.tx_gram.settings.cssPath}styles.css" id="styles" data-dark="{$plugin.tx_gram.settings.cssPath}styles-dark.css"/>
         }
 
         includeCSS {
