@@ -18,6 +18,8 @@
         <li class="nav-item">
           <f:link.page pageUid="{settings.root}" class="nav-link active"><i class="fa fa-home fa-fw text-primary"></i> <span class="d-inline d-lg-none">Homepage</span></f:link.page>
         </li>
+
+        <f:security.ifAuthenticated>
         <li class="nav-item">
           <f:link.page pageUid="{settings.inboxPage}" class="nav-link"><i class="fa fa-paper-plane fa-fw"></i> <span class="d-inline d-lg-none">Inbox</span></f:link.page>
         </li>
@@ -43,8 +45,6 @@
             </li>
           </ul>
         </li>
-
-        <f:security.ifAuthenticated>
         <li class="nav-item dropdown">
           <a class="nav-link" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
             <div class="avatar">
@@ -61,7 +61,9 @@
                 </f:link.page>
             </li>
             <li>
-              <a class="dropdown-item" href="settings.html"><i class="fa fa-cog fa-fw"></i> Settings</a>
+                <f:link.page pageUid="{settings.settingsPage}" class="dropdown-item">
+                    <i class="fa fa-cog fa-fw"></i> Settings
+                </f:link.page>
             </li>
           </ul>
         </li>
@@ -70,6 +72,7 @@
         <li class="nav-item">
           <a class="nav-link" href="#" onclick="gram.toggleStyles();"><i class="fa fa-adjust fa-fw"></i> <span class="d-inline d-lg-none">Contrast</span></a>
         </li>
+
       </ul>
     </div>
   </div>
