@@ -25,6 +25,7 @@ lib.themeSettings{
     tagPage = {$plugin.tx_gram.settings.tagPage}
     inboxPage = {$plugin.tx_gram.settings.inboxPage}
     profilePage = {$plugin.tx_gram.settings.profilePage}
+    settingsPage = {$plugin.tx_gram.settings.settingsPage}
     explorePage = {$plugin.tx_gram.settings.explorePage}
     postUrl = {$plugin.tx_gram.settings.postUrl}
     cssPath = {$plugin.tx_gram.settings.cssPath}

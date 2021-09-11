@@ -18,6 +18,8 @@ plugin.tx_gram{
         inboxPage =
         # cat=GRAM; type=string; label=Profile Page
         profilePage =
+        # cat=GRAM; type=string; label=Settings Page
+        settingsPage =
         # cat=GRAM; type=string; label=Base Url
         baseUrl = https://panama-auswandern.com/gram/
         # cat=GRAM; type=string; label=Gallery Url (Ajax Data)
