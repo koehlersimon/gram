@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-07-19T14:26:00Z" product-name="gram">
+		<header/>
+		<body>
+
+			<trans-unit id="frontend.login">
+				<source>Log In</source>
+			</trans-unit>
+			<trans-unit id="frontend.signup">
+				<source>Sign Up</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>
