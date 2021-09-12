@@ -304,13 +304,13 @@ galleryData {
 
 lib.contentElement {
     templateRootPaths {
-        23000 = EXT:gram/Resources/Private/Ext/fluid_styled_content/Resources/Private/Templates/
+        23000 = EXT:gram/Resources/Private/ContentElements/Templates/
     }
     partialRootPaths {
-        23000 = EXT:gram/Resources/Private/Ext/fluid_styled_content/Resources/Private/Partials/
+        23000 = EXT:gram/Resources/Private/ContentElements/Partials/
     }
     layoutRootPaths {
-        23000 = EXT:gram/Resources/Private/Ext/fluid_styled_content/Resources/Private/Layouts/
+        23000 = EXT:gram/Resources/Private/ContentElements/Layouts/
     }
 }
 
