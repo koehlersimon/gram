@@ -292,6 +292,7 @@ galleryData {
                  Post {
                      1 = galleryData
                      2 = detail
+                     3 = comments
                  }
              }
              view < plugin.tx_gram.view

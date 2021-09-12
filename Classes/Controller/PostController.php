@@ -107,6 +107,17 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      *
      * @return void
      */
+    public function commentsAction(){
+        $comments = [];
+        $this->view->assign('settings',$this->settings);
+        $this->view->assign('comments',$comments);
+    }
+
+    /**
+     * action explore
+     *
+     * @return void
+     */
     public function exploreAction(){
         $posts = $this->postRepository->findAll();
         $this->view->assign('settings',$this->settings);
