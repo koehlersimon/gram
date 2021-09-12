@@ -26,6 +26,8 @@ plugin.tx_gram{
         galleryUrl = https://panama-auswandern.com/gram?type=9724&tx_gram_gallery[page]=###PAGE###
         # cat=GRAM; type=string; label=Post Url (Ajax Data)
         postUrl = https://panama-auswandern.com/gram?type=9724&tx_gram_gallery[action]=detail&tx_gram_gallery[post]=###POST###
+        # cat=GRAM; type=string; label=Comments Url (Ajax Data)
+        commentsUrl = https://panama-auswandern.com/gram?type=9724&tx_gram_gallery[action]=comments&tx_gram_gallery[post]=###POST###
         # cat=GRAM; type=string; label=Notifications Url
         notificationsUrl = https://panama-auswandern.com/gram/notifications
         # cat=GRAM; type=int; label=Notification Interval

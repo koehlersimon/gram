@@ -28,6 +28,7 @@ lib.themeSettings{
     settingsPage = {$plugin.tx_gram.settings.settingsPage}
     explorePage = {$plugin.tx_gram.settings.explorePage}
     postUrl = {$plugin.tx_gram.settings.postUrl}
+    commentsUrl = {$plugin.tx_gram.settings.commentsUrl}
     cssPath = {$plugin.tx_gram.settings.cssPath}
 }
 
@@ -53,7 +54,7 @@ page{
         headerData{
             20 = TEXT
             20.wrap = <script>window.gram_config = { | }</script>
-            20.value = 'baseUrl': '{$plugin.tx_gram.settings.baseUrl}','galleryUrl': '{$plugin.tx_gram.settings.galleryUrl}','postUrl': '{$plugin.tx_gram.settings.postUrl}','notificationsUrl':'{$plugin.tx_gram.settings.notificationsUrl}','notificationInterval':{$plugin.tx_gram.settings.notificationInterval}
+            20.value = 'baseUrl': '{$plugin.tx_gram.settings.baseUrl}','galleryUrl': '{$plugin.tx_gram.settings.galleryUrl}','commentsUrl': '{$plugin.tx_gram.settings.commentsUrl}','postUrl': '{$plugin.tx_gram.settings.postUrl}','notificationsUrl':'{$plugin.tx_gram.settings.notificationsUrl}','notificationInterval':{$plugin.tx_gram.settings.notificationInterval}
 
             40 = TEXT
             40.value = <link rel="stylesheet" href="{$plugin.tx_gram.settings.cssPath}styles.css" id="styles" data-light="{$plugin.tx_gram.settings.cssPath}styles.css" data-dark="{$plugin.tx_gram.settings.cssPath}styles-dark.css"/>
