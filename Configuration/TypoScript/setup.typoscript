@@ -17,19 +17,47 @@ config{
 
 #page.config.contentObjectExceptionHandler = 0
 
-lib.themeSettings{
-    root = {$plugin.tx_gram.settings.root}
-    logo = {$plugin.tx_gram.settings.logo}
-    loginPage = {$plugin.tx_gram.settings.loginPage}
-    signupPage = {$plugin.tx_gram.settings.signupPage}
-    tagPage = {$plugin.tx_gram.settings.tagPage}
-    inboxPage = {$plugin.tx_gram.settings.inboxPage}
-    profilePage = {$plugin.tx_gram.settings.profilePage}
-    settingsPage = {$plugin.tx_gram.settings.settingsPage}
-    explorePage = {$plugin.tx_gram.settings.explorePage}
-    postUrl = {$plugin.tx_gram.settings.postUrl}
-    commentsUrl = {$plugin.tx_gram.settings.commentsUrl}
-    cssPath = {$plugin.tx_gram.settings.cssPath}
+lib{
+    themeSettings{
+        root = {$plugin.tx_gram.settings.root}
+        logo = {$plugin.tx_gram.settings.logo}
+        loginPage = {$plugin.tx_gram.settings.loginPage}
+        signupPage = {$plugin.tx_gram.settings.signupPage}
+        tagPage = {$plugin.tx_gram.settings.tagPage}
+        inboxPage = {$plugin.tx_gram.settings.inboxPage}
+        profilePage = {$plugin.tx_gram.settings.profilePage}
+        settingsPage = {$plugin.tx_gram.settings.settingsPage}
+        explorePage = {$plugin.tx_gram.settings.explorePage}
+        postUrl = {$plugin.tx_gram.settings.postUrl}
+        commentsUrl = {$plugin.tx_gram.settings.commentsUrl}
+        cssPath = {$plugin.tx_gram.settings.cssPath}
+    }
+    contentElement {
+        templateRootPaths {
+            23000 = EXT:gram/Resources/Private/ContentElements/Templates/
+        }
+        partialRootPaths {
+            23000 = EXT:gram/Resources/Private/ContentElements/Partials/
+        }
+        layoutRootPaths {
+            23000 = EXT:gram/Resources/Private/ContentElements/Layouts/
+        }
+    }
+    stdheader{
+        10.setCurrent.htmlSpecialChars = 0
+
+        3 = LOAD_REGISTER
+        3.headerClass =
+        3.headerClass.noTrimWrap = |
+
+        stdWrap.dataWrap = |
+        10.0.dataWrap = <h1>|</h1>
+        10.1.dataWrap = <h1>|</h1>
+        10.2.dataWrap = <h2>|</h2>
+        10.3.dataWrap = <h3>|</h3>
+        10.4.dataWrap = <h4>|</h4>
+        10.5.dataWrap = <h5>|</h5>
+    }
 }
 
 page = PAGE
@@ -96,15 +124,6 @@ page{
                    }
                 }
 
-                15 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-                15 {
-                    levels = 5
-                    entryLevel = 1
-                    expandAll = 0
-                    includeSpacer = 1
-                    as = menuSecond
-                }
-
                 20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
                 20 {
                     special = directory
@@ -143,11 +162,6 @@ page{
 
             variables {
 
-                contentTop < styles.content.get
-                contentTop.select.where = colPos = 1
-                contentTop.select.includeRecordsWithoutDefaultTranslation = 1
-                contentTop.slide = -1
-
                 content < styles.content.get
                 content.select.where = colPos = 0
                 content.select.includeRecordsWithoutDefaultTranslation = 1
@@ -161,60 +175,8 @@ page{
                 contentFooter.select.includeRecordsWithoutDefaultTranslation = 1
                 contentFooter.slide = -1
 
-                content3 < styles.content.get
-                content3.select.where = colPos = 3
-                content3.select.includeRecordsWithoutDefaultTranslation = 1
-
-                content4 < styles.content.get
-                content4.select.where = colPos = 4
-                content4.select.includeRecordsWithoutDefaultTranslation = 1
-
-                content5 < styles.content.get
-                content5.select.where = colPos = 5
-                content5.select.includeRecordsWithoutDefaultTranslation = 1
-
-                content6 < styles.content.get
-                content6.select.where = colPos = 6
-                content6.select.includeRecordsWithoutDefaultTranslation = 1
-
-                content7 < styles.content.get
-                content7.select.where = colPos = 7
-                content7.select.includeRecordsWithoutDefaultTranslation = 1
-
-                content8 < styles.content.get
-                content8.select.where = colPos = 8
-                content8.select.includeRecordsWithoutDefaultTranslation = 1
-
-                content9 < styles.content.get
-                content9.select.where = colPos = 9
-                content9.select.includeRecordsWithoutDefaultTranslation = 1
-
-                content10 < styles.content.get
-                content10.select.where = colPos = 10
-                content10.select.includeRecordsWithoutDefaultTranslation = 1
-
-                content11 < styles.content.get
-                content11.select.where = colPos = 11
-                content11.select.includeRecordsWithoutDefaultTranslation = 1
-
-                userName = TEXT
-                userName.data = TSFE:fe_user|user|name
-
-                userEmail = TEXT
-                userEmail.data = TSFE:fe_user|user|email
-
-                rootPageId = TEXT
-                rootPageId.data = site:rootPageId
-
                 version = TEXT
                 version.value = 1.0.0
-
-                pageHeader = TEXT
-                pageHeader {
-                    value = {page:title}
-                    insertData = 1
-                    ifEmpty.value = Empty page
-                }
 
             }
 
@@ -309,42 +271,17 @@ galleryData {
     }
 }
 
-lib.contentElement {
-    templateRootPaths {
-        23000 = EXT:gram/Resources/Private/ContentElements/Templates/
+
+// Plugin settings
+plugin{
+    // Set template path for Frontend Login
+    tx_felogin_login {
+        view {
+            templateRootPaths.900 = EXT:gram/Resources/Private/Templates/Felogin/
+        }
     }
-    partialRootPaths {
-        23000 = EXT:gram/Resources/Private/ContentElements/Partials/
-    }
-    layoutRootPaths {
-        23000 = EXT:gram/Resources/Private/ContentElements/Layouts/
-    }
+    // Assign constants settings to setup
+    tx_gram.settings < lib.themeSettings
 }
 
-# HEADER LAYOUTS
-
-lib.stdheader.10.setCurrent.htmlSpecialChars = 0
-
-lib.stdheader.3 = LOAD_REGISTER
-lib.stdheader.3.headerClass =
-lib.stdheader.3.headerClass.noTrimWrap = |
-
-lib.stdheader.stdWrap.dataWrap = |
-lib.stdheader.10.0.dataWrap = <h1>|</h1>
-lib.stdheader.10.1.dataWrap = <h1>|</h1>
-lib.stdheader.10.2.dataWrap = <h2>|</h2>
-lib.stdheader.10.3.dataWrap = <h3>|</h3>
-lib.stdheader.10.4.dataWrap = <h4>|</h4>
-lib.stdheader.10.5.dataWrap = <h5>|</h5>
-
-<INCLUDE_TYPOSCRIPT: source="DIR:typo3conf/ext/gram/Configuration/TypoScript/Setup/" extensions="typoscript">
-
-// Set template path for Frontend Login
-plugin.tx_felogin_login {
-    view {
-        templateRootPaths.900 = EXT:gram/Resources/Private/Templates/Felogin/
-    }
-}
-
-// Assign constants settings to setup
-plugin.tx_gram.settings < lib.themeSettings
+@import 'EXT:gram/Configuration/TypoScript/Setup/*.typoscript'
