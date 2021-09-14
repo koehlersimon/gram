@@ -223,9 +223,8 @@ page{
                 key.data = levelfield:-1, backend_layout_next_level, slide
                 key.override.field = backend_layout
 
-                # Deprecated, needs to be removed in next version
-                # pagets__2000 = TEXT
-                # pagets__2000.value = EXT:gram/Resources/Private/Templates/DefaultSidebarLeft.html
+                pagets__inbox = TEXT
+                pagets__inbox.value = EXT:gram/Resources/Private/Templates/Inbox.html
 
                 default = TEXT
                 default.value = EXT:gram/Resources/Private/Templates/Default.html
