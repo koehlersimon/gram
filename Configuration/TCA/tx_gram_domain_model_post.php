@@ -10,9 +10,6 @@ return [
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
         'versioningWS' => true,
-        'languageField' => 'sys_language_uid',
-        'transOrigPointerField' => 'l10n_parent',
-        'transOrigDiffSourceField' => 'l10n_diffsource',
         'delete' => 'deleted',
         'enablecolumns' => [
             'disabled' => 'hidden',
@@ -24,10 +21,10 @@ return [
         'iconfile' => 'EXT:gram/Resources/Public/Icons/Extension.svg'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, owner, likes',
+        'showRecordFieldList' => 'hidden, owner, likes',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, crdate, content, likes, owner, --div--;Media, media, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime, fe_group;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:fe_group_formlabel'],
+        '1' => ['showitem' => 'hidden, crdate, content, likes, owner, --div--;Media, media, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime, fe_group;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:fe_group_formlabel'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -76,7 +73,7 @@ return [
             ],
         ],
         'crdate' => [
-            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.crdate',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.crdate',
             'config' => [
                 'type' => 'input',
                 'renderType' => 'inputDateTime',
@@ -85,7 +82,7 @@ return [
         ],
         'hidden' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
             'config' => [
                 'type' => 'check',
                 'items' => [
@@ -100,7 +97,7 @@ return [
             'behaviour' => [
                 'allowLanguageSynchronization' => true
             ],
-            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
             'config' => [
                 'type' => 'input',
                 'renderType' => 'inputDateTime',
@@ -114,7 +111,7 @@ return [
             'behaviour' => [
                 'allowLanguageSynchronization' => true
             ],
-            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
             'config' => [
                 'type' => 'input',
                 'renderType' => 'inputDateTime',
