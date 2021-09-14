@@ -1,0 +1,38 @@
+mod {
+    web_layout {
+        BackendLayouts {
+
+            Inbox {
+                title = Inbox
+                icon = EXT:gram/Resources/Public/Icons/Extension.svg
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 2
+                        rows {
+
+                            1 {
+                                columns {
+                                    1 {
+                                        name = One
+                                        colPos = 0
+                                    }
+                                }
+                            }
+                            2{
+                                columns {
+                                    1 {
+                                        name = Two
+                                        colPos = 2
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
