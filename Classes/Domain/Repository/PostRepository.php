@@ -30,6 +30,7 @@ class PostRepository extends \TYPO3\CMS\Extbase\Persistence\Repository{
 
 	public function findByOwner($owner){
 		$query = $this->createQuery();
+		$query->getQuerySettings()->setRespectStoragePage(FALSE);
 		$query->getQuerySettings()->setIgnoreEnableFields(true);
 		$query->matching($query->contains('owner', $owner));
 	    return $query->execute();
