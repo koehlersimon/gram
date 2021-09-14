@@ -6,6 +6,7 @@ use TYPO3\CMS\Extbase\Annotation\Inject;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\TypoScript\Parser\ConstantConfigurationParser;
+use TYPO3\CMS\Extbase\Domain\Repository\FrontendUserRepository;
 use TYPO3\CMS\Extbase\Service\ImageService;
 
 /**
@@ -15,12 +16,9 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
 
     /**
-     * Protected Variable FrontendUserRepository wird mit NULL initialisiert.
-     *
-     * @var \TYPO3\CMS\Extbase\Domain\Repository\FrontendUserRepository
-     * @Inject
+     * @var FrontendUserRepository
      */
-    protected $frontendUserRepository = NULL;
+    protected $frontendUserRepository;
 
     /**
      * @var ImageService
@@ -34,7 +32,7 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     protected $persistenceManager;
 
     /**
-     * @var \TYPO3\CMS\Core\TypoScript\Parser\ConstantConfigurationParser
+     * @var ConstantConfigurationParser
      */
     private $configurationParser;
 
@@ -51,12 +49,20 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     }
 
     /**
+     * @param FrontendUserRepository $frontendUserRepository
+     */
+    public function injectFrontendUserRepository(FrontendUserRepository $frontendUserRepository){
+        $this->frontendUserRepository = $frontendUserRepository;
+    }
+
+    /**
      * action galleryDataAction
      *
      * @return void
      */
     public function galleryDataAction(){
-        //$fe_user = $this->frontendUserRepository->findByUid($GLOBALS['TSFE']->fe_user->user['uid']);
+
+        $fe_user = $this->frontendUserRepository->findByUid($GLOBALS['TSFE']->fe_user->user['uid']);
         //$this->view->assign('fe_user', $fe_user);
 
         if($this->request->hasArgument('page')){
@@ -67,11 +73,11 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         }
 
         $data = [
-            'username' => 'Demo Man',
+            'username' => $fe_user->getUsername(),
             'items' => []
         ];
 
-        $posts = $this->postRepository->findAllAjax($page);
+        $posts = $this->postRepository->findByOwner($fe_user);
         foreach ($posts as $post) {
             $imagePath = $post->getMedia()[0]->getOriginalResource()->getOriginalFile()->getPublicUrl();
             $processedImage = $this->imageService->applyProcessingInstructions($this->imageService->getImage($imagePath, null, false), ['width' => '416c','height' => '416c']);
@@ -87,6 +93,7 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         $this->view->assign('data',json_encode($data));
         $this->view->assign('settings',$this->settings);
         $this->view->assign('page',$page);
+        $this->view->assign('fe_user', $fe_user);
 
     }
 
