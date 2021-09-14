@@ -49,9 +49,14 @@
           <a class="nav-link" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
             <div class="avatar">
                 <f:if condition="{fe_user.0.images.0}">
-                    <f:image image="{fe_user.0.images.0}" class="rounded-circle border" height="16" width="16" title="{fe_user.0.data.username}"/>
-                    <span class="d-inline d-lg-none">My Account</span>
+                    <f:then>
+                        <f:image image="{fe_user.0.images.0}" class="rounded-circle border" height="16" width="16" title="{fe_user.0.data.username}"/>
+                    </f:then>
+                    <f:else>
+                        <img src="https://via.placeholder.com/128x128" alt="no avatar" width="16" height="16" class="rounded-circle border">
+                    </f:else>
                 </f:if>
+                <span class="d-inline d-lg-none">My Account</span>
             </div>
           </a>
           <ul class="dropdown-menu dropdown-menu-end shadow border-0">
