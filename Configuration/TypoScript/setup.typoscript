@@ -223,8 +223,8 @@ page{
                 key.data = levelfield:-1, backend_layout_next_level, slide
                 key.override.field = backend_layout
 
-                pagets__inbox = TEXT
-                pagets__inbox.value = EXT:gram/Resources/Private/Templates/Inbox.html
+                //pagets__inbox = TEXT
+                //pagets__inbox.value = EXT:gram/Resources/Private/Templates/Inbox.html
 
                 default = TEXT
                 default.value = EXT:gram/Resources/Private/Templates/Default.html
@@ -232,6 +232,15 @@ page{
 	}
 
 }
+
+[page["uid"] == {$plugin.tx_gram.settings.inboxPage}]
+    config.htmlTag.attributes.class = h-100
+    page.bodyTag = <body class="inbox">
+    page.10.file.cObject >
+    page.10{
+        file = EXT:gram/Resources/Private/Templates/Inbox.html
+    }
+[END]
 
 
 notificationsPage = PAGE
