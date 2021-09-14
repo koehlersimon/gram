@@ -23,55 +23,56 @@ call_user_func(
         }
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-          'Gram',
-          'Explore',
-          [
-             \SIMONKOEHLER\Gram\Controller\PostController::class => 'explore',
-          ],
-          // non-cacheable actions
-          [
-             \SIMONKOEHLER\Gram\Controller\PostController::class => '',
-          ]
-       );
+              'Gram',
+              'Explore',
+              [
+                 \SIMONKOEHLER\Gram\Controller\PostController::class => 'explore',
+              ],
+              // non-cacheable actions
+              [
+                 \SIMONKOEHLER\Gram\Controller\PostController::class => '',
+              ]
+        );
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-          'Gram',
-          'Gallery',
-          [
-             \SIMONKOEHLER\Gram\Controller\PostController::class => 'list,galleryData,detail,comments',
-          ],
-          // non-cacheable actions
-          [
-             \SIMONKOEHLER\Gram\Controller\PostController::class => '',
-          ]
-       );
+              'Gram',
+              'Gallery',
+              [
+                 \SIMONKOEHLER\Gram\Controller\PostController::class => 'list,galleryData,detail,comments',
+              ],
+              // non-cacheable actions
+              [
+                 \SIMONKOEHLER\Gram\Controller\PostController::class => '',
+              ]
+        );
 
-       \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-         'Gram',
-         'Notifications',
-         [
-            \SIMONKOEHLER\Gram\Controller\NotificationController::class => 'list',
-         ],
-         // non-cacheable actions
-         [
-            \SIMONKOEHLER\Gram\Controller\NotificationController::class => '',
-         ]
-      );
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+             'Gram',
+             'Notifications',
+             [
+                \SIMONKOEHLER\Gram\Controller\NotificationController::class => 'list',
+             ],
+             // non-cacheable actions
+             [
+                \SIMONKOEHLER\Gram\Controller\NotificationController::class => '',
+             ]
+        );
 
-      \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'Gram',
-        'Inbox',
-        [
-           \SIMONKOEHLER\Gram\Controller\InboxController::class => 'interface',
-        ],
-        // non-cacheable actions
-        [
-           \SIMONKOEHLER\Gram\Controller\InboxController::class => '',
-        ]
-     );
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Gram',
+            'Inbox',
+            [
+               \SIMONKOEHLER\Gram\Controller\InboxController::class => 'interface',
+            ],
+            // non-cacheable actions
+            [
+               \SIMONKOEHLER\Gram\Controller\InboxController::class => '',
+            ]
+        );
 
-    // Add default RTE configuration
-    //$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['eleganz'] = 'EXT:eleganz/Configuration/RTE/Default.yaml';
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gram/Configuration/TypoSript/Page/belayouts.tsconfig">'
+        );
 
     }
 );
