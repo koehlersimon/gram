@@ -345,3 +345,6 @@ plugin.tx_felogin_login {
         templateRootPaths.900 = EXT:gram/Resources/Private/Templates/Felogin/
     }
 }
+
+// Assign constants settings to setup
+plugin.tx_gram.settings < lib.themeSettings
