@@ -35,40 +35,40 @@ lib.themeSettings{
 page = PAGE
 page{
 
-        meta {
-            viewport = width=device-width, initial-scale=1
-            X-UA-Compatible = IE=11
-            X-UA-Compatible.httpEquivalent = 1
-            msapplication-TileColor = #eeeeee
-            apple-mobile-web-app-capable = yes
-            theme-color = #eeeeee
-            keywords {
-                stdWrap {
-                    override {
-                        data = page:keywords
-                    }
+    meta {
+        viewport = width=device-width, initial-scale=1
+        X-UA-Compatible = IE=11
+        X-UA-Compatible.httpEquivalent = 1
+        msapplication-TileColor = #eeeeee
+        apple-mobile-web-app-capable = yes
+        theme-color = #eeeeee
+        keywords {
+            stdWrap {
+                override {
+                    data = page:keywords
                 }
             }
         }
+    }
 
-        headerData{
-            20 = TEXT
-            20.wrap = <script>window.gram_config = { | }</script>
-            20.value = 'baseUrl': '{$plugin.tx_gram.settings.baseUrl}','galleryUrl': '{$plugin.tx_gram.settings.galleryUrl}','commentsUrl': '{$plugin.tx_gram.settings.commentsUrl}','postUrl': '{$plugin.tx_gram.settings.postUrl}','notificationsUrl':'{$plugin.tx_gram.settings.notificationsUrl}','notificationInterval':{$plugin.tx_gram.settings.notificationInterval}
+    headerData{
+        20 = TEXT
+        20.wrap = <script>window.gram_config = { | }</script>
+        20.value = 'baseUrl': '{$plugin.tx_gram.settings.baseUrl}','galleryUrl': '{$plugin.tx_gram.settings.galleryUrl}','commentsUrl': '{$plugin.tx_gram.settings.commentsUrl}','postUrl': '{$plugin.tx_gram.settings.postUrl}','notificationsUrl':'{$plugin.tx_gram.settings.notificationsUrl}','notificationInterval':{$plugin.tx_gram.settings.notificationInterval}
 
-            40 = TEXT
-            40.value = <link rel="stylesheet" href="{$plugin.tx_gram.settings.cssPath}styles.css" id="styles" data-light="{$plugin.tx_gram.settings.cssPath}styles.css" data-dark="{$plugin.tx_gram.settings.cssPath}styles-dark.css"/>
-        }
+        40 = TEXT
+        40.value = <link rel="stylesheet" href="{$plugin.tx_gram.settings.cssPath}styles.css" id="styles" data-light="{$plugin.tx_gram.settings.cssPath}styles.css" data-dark="{$plugin.tx_gram.settings.cssPath}styles-dark.css"/>
+    }
 
-        includeCSS {
-            #global = EXT:gram/Resources/Public/gram/css/styles.css
-        }
+    includeCSS {
+        #global = EXT:gram/Resources/Public/gram/css/styles.css
+    }
 
-        includeJS{
-            bootstrap = EXT:gram/Resources/Public/gram/libs/bootstrap-5.1.1/dist/js/bootstrap.bundle.min.js
-            global = EXT:gram/Resources/Public/gram/js/gram.js
-            app = EXT:gram/Resources/Public/gram/js/app.js
-        }
+    includeJS{
+        bootstrap = EXT:gram/Resources/Public/gram/libs/bootstrap-5.1.1/dist/js/bootstrap.bundle.min.js
+        global = EXT:gram/Resources/Public/gram/js/gram.js
+        app = EXT:gram/Resources/Public/gram/js/app.js
+    }
 
     10 = FLUIDTEMPLATE
 	10{
@@ -242,7 +242,6 @@ page{
     }
 [END]
 
-
 notificationsPage = PAGE
 notificationsPage.typeNum = 9723
 notificationsPage{
@@ -275,7 +274,6 @@ notificationsPage{
          }
     }
 }
-
 
 galleryData = PAGE
 galleryData {
@@ -311,7 +309,6 @@ galleryData {
     }
 }
 
-
 lib.contentElement {
     templateRootPaths {
         23000 = EXT:gram/Resources/Private/ContentElements/Templates/
@@ -323,7 +320,6 @@ lib.contentElement {
         23000 = EXT:gram/Resources/Private/ContentElements/Layouts/
     }
 }
-
 
 # HEADER LAYOUTS
 
